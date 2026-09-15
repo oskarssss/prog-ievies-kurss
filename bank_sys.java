@@ -13,6 +13,14 @@ class BankAccount {
         transactions.add("Konts izveidots ar atlikumu: " + balance + " $");
     }
 
+    public void deposit(double amount) {
+        balance += amount;
+        transactions.add("Iemaksa: +" + amount + " $");
+
+        System.out.println("Nauda veiksmīgi iemaksāta!");
+        System.out.println("Jaunais atlikums: " + balance + " $");
+    }
+
     public class Main {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
