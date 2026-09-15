@@ -51,6 +51,10 @@ class BankAccount {
 
     public void showTransactions(){
         System.out.println("\n----- TRANSAKCIJAS -----");
+
+        for (String transaction : transactions){
+            System.out.println(transactions);
+        }
     }
 
     public class Main {
