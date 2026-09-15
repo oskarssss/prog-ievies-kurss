@@ -81,6 +81,19 @@ class BankAccount {
                 System.out.println("3. Apskatīt atlikumu");
                 System.out.println("4. Apskatīt transakcijas");
                 System.out.println("0. Iziet");
+
+                System.out.println("Izvēlies darbību: ");
+
+                int choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 0:
+                    default:
+                }
             }
         }
     }
