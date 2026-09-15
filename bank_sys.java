@@ -54,7 +54,7 @@ class BankAccount {
         System.out.println("\n----- TRANSAKCIJAS -----");
 
         for (String transaction : transactions){
-            System.out.println(transactions);
+            System.out.println(transaction);
         }
     }
 
