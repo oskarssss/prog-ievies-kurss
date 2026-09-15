@@ -49,6 +49,10 @@ class BankAccount {
         System.out.println("Konta atlikums: " + balance + " $");
     }
 
+    public void showTransactions(){
+        System.out.println("\n----- TRANSAKCIJAS -----");
+    }
+
     public class Main {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
