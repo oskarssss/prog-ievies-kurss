@@ -88,6 +88,12 @@ class BankAccount {
 
                 switch (choice) {
                     case 1:
+                        System.out.print("Ievadi iemaksas summu: ");
+                        double depositAmount = scanner.nextDouble();
+
+                        account.deposit(depositAmount);
+                        break;
+                        
                     case 2:
                     case 3:
                     case 4:
