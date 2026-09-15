@@ -93,8 +93,14 @@ class BankAccount {
 
                         account.deposit(depositAmount);
                         break;
-                        
+
                     case 2:
+                        System.out.print("Ievadi izmaksas summu: ");
+                        double withdrawAmount = scanner.nextDouble();
+
+                        account.withdraw(withdrawAmount);
+                        break;
+                        
                     case 3:
                     case 4:
                     case 0:
