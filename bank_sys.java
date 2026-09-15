@@ -44,6 +44,11 @@ class BankAccount {
         System.out.println("Jaunais atlikums: " + balance + " $");
     }
 
+    public void showBalance(){
+        System.out.println("Konta īpašnieks: " + owner);
+        System.out.println("Konta atlikums: " + balance + " $");
+    }
+
     public class Main {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
