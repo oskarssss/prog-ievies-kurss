@@ -6,10 +6,10 @@ public class Main {
 
             System.out.println("----- BANKA -----");
 
-            System.out.println("Ievadi savu vārdu: ");
+            System.out.println("Ievadi savu vardu: ");
             String name = scanner.nextLine();
 
-            System.out.print("Ievadi sākuma atlikumu: ");
+            System.out.print("Ievadi sakuma atlikumu: ");
             double startingBalance = scanner.nextDouble();
 
             BankAccount account = new BankAccount(name, startingBalance);
@@ -18,14 +18,14 @@ public class Main {
 
             while (running) {
 
-                System.out.println("\n----- IZVĒLNE -----");
-                System.out.println("1. Iemaksāt naudu");
-                System.out.println("2. Izņemt naudu");
-                System.out.println("3. Apskatīt atlikumu");
-                System.out.println("4. Apskatīt transakcijas");
+                System.out.println("\n----- IZVELNE -----");
+                System.out.println("1. Iemaksat naudu");
+                System.out.println("2. Iznemt naudu");
+                System.out.println("3. Apskatit atlikumu");
+                System.out.println("4. Apskatit transakcijas");
                 System.out.println("0. Iziet");
 
-                System.out.println("Izvēlies darbību: ");
+                System.out.println("Izvelies darbibu: ");
 
                 int choice = scanner.nextInt();
 
@@ -54,11 +54,11 @@ public class Main {
 
                     case 0:
                         running = false;
-                        System.out.println("Paldies par programmas izmantošanu!");
+                        System.out.println("Paldies par programmas izmantosanu!");
                         break;
 
                     default:
-                        System.out.println("Nepareiza izvēle!");
+                        System.out.println("Nepareiza izvele!");
                 }
             }
 
