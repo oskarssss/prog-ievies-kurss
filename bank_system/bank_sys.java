@@ -55,5 +55,7 @@ class BankAccount {
         for (String transaction : transactions){
             System.out.println(transaction);
         }
+
+        System.out.println("\nAtlikums: " + balance + " $");
     }
 }
