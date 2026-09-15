@@ -15,37 +15,37 @@ class BankAccount {
 
     public void deposit(double amount) {
         if (amount <= 0) {
-            System.out.println("Summai jābūt lielākai par 0!");
+            System.out.println("Summai jabut lielakai par 0!");
             return;
         }
 
         balance += amount;
         transactions.add("Iemaksa: +" + amount + " $");
 
-        System.out.println("Nauda veiksmīgi iemaksāta!");
+        System.out.println("Nauda veiksmigi iemaksata!");
         System.out.println("Jaunais atlikums: " + balance + " $");
     }
 
     public void withdraw(double amount) {
         if (amount <= 0) {
-            System.out.println("Summai jābūt lielākai par 0!");
+            System.out.println("Summai jabut lielakai par 0!");
             return;
         }
 
         if (amount > balance) {
-            System.out.println("Nepietiek līdzekļu!");
+            System.out.println("Nepietiek lidzeklu!");
             return;
         }
 
         balance -= amount;
         transactions.add("Izmaksa: -" + amount + " $");
 
-        System.out.println("Nauda veiksmīgi izņemta!");
+        System.out.println("Nauda veiksmigi iznemta!");
         System.out.println("Jaunais atlikums: " + balance + " $");
     }
 
     public void showBalance(){
-        System.out.println("Konta īpašnieks: " + owner);
+        System.out.println("Konta ipasnieks: " + owner);
         System.out.println("Konta atlikums: " + balance + " $");
     }
 
