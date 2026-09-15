@@ -9,6 +9,12 @@ public class Main {
             System.out.println("Ievadi savu vardu: ");
             String name = scanner.nextLine();
 
+            while (name.trim().isEmpty()) {
+                System.out.println("Konta īpašnieka vārds nevar būt tukšs!");
+                System.out.print("Ievadi savu vārdu vēlreiz: ");
+                name = scanner.nextLine();
+            }
+
             System.out.print("Ievadi sakuma atlikumu: ");
             double startingBalance = scanner.nextDouble();
 
