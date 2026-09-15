@@ -113,10 +113,13 @@ class BankAccount {
                         running = false;
                         System.out.println("Paldies par programmas izmantošanu!");
                         break;
-                        
+
                     default:
+                        System.out.println("Nepareiza izvēle!");
                 }
             }
+
+            scanner.close();
         }
     }
 
