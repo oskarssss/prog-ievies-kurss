@@ -14,6 +14,11 @@ class BankAccount {
     }
 
     public void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Summai jābūt lielākai par 0!");
+            return;
+        }
+
         balance += amount;
         transactions.add("Iemaksa: +" + amount + " $");
 
