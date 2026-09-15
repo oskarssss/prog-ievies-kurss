@@ -100,8 +100,11 @@ class BankAccount {
 
                         account.withdraw(withdrawAmount);
                         break;
-                        
+
                     case 3:
+                        account.showBalance();
+                        break;
+                        
                     case 4:
                     case 0:
                     default:
