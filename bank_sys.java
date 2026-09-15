@@ -108,8 +108,12 @@ class BankAccount {
                     case 4:
                         account.showTransactions();
                         break;
-                        
+
                     case 0:
+                        running = false;
+                        System.out.println("Paldies par programmas izmantošanu!");
+                        break;
+                        
                     default:
                 }
             }
