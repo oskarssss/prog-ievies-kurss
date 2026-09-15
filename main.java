@@ -12,6 +12,12 @@ public class Main {
             System.out.print("Ievadi sakuma atlikumu: ");
             double startingBalance = scanner.nextDouble();
 
+            while (startingBalance < 0) {
+                System.out.println("Sākuma atlikums nevar būt negatīvs!");
+                System.out.print("Ievadi sākuma atlikumu vēlreiz: ");
+                startingBalance = scanner.nextDouble();
+            }
+
             BankAccount account = new BankAccount(name, startingBalance);
 
             boolean running = true;
