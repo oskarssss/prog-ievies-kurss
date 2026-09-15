@@ -27,6 +27,16 @@ class BankAccount {
     }
 
     public void withdraw(double amount) {
+        if (amount <= 0) {
+            System.out.println("Summai jābūt lielākai par 0!");
+            return;
+        }
+
+        if (amount > balance) {
+            System.out.println("Nepietiek līdzekļu!");
+            return;
+        }
+
         balance -= amount;
         transactions.add("Izmaksa: -" + amount + " $")
 
