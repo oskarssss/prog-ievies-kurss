@@ -26,6 +26,14 @@ class BankAccount {
         System.out.println("Jaunais atlikums: " + balance + " $");
     }
 
+    public void withdraw(double amount) {
+        balance -= amount;
+        transactions.add("Izmaksa: -" + amount + " $")
+
+        System.out.println("Nauda veiksmīgi izņemta!");
+        System.out.println("Jaunais atlikums: " + balance + " $");
+    }
+
     public class Main {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
