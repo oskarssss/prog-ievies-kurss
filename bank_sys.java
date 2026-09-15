@@ -26,6 +26,18 @@ class BankAccount {
             double startingBalance = scanner.nextDouble();
 
             BankAccount account = new BankAccount(name, startingBalance);
+
+            boolean running = true;
+
+            while (running) {
+
+                System.out.println("\n----- IZVĒLNE -----");
+                System.out.println("1. Iemaksāt naudu");
+                System.out.println("2. Izņemt naudu");
+                System.out.println("3. Apskatīt atlikumu");
+                System.out.println("4. Apskatīt transakcijas");
+                System.out.println("0. Iziet");
+            }
         }
     }
 
