@@ -39,7 +39,7 @@ class BankAccount {
         }
 
         balance -= amount;
-        transactions.add("Izmaksa: -" + amount + " $")
+        transactions.add("Izmaksa: -" + amount + " $");
 
         System.out.println("Nauda veiksmīgi izņemta!");
         System.out.println("Jaunais atlikums: " + balance + " $");
