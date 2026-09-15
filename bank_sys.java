@@ -104,8 +104,11 @@ class BankAccount {
                     case 3:
                         account.showBalance();
                         break;
-                        
+
                     case 4:
+                        account.showTransactions();
+                        break;
+                        
                     case 0:
                     default:
                 }
