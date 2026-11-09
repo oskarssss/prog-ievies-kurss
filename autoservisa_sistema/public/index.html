@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Autoservisa rezervācijas sistēma</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Autoservisa rezervācijas sistēma</h1>
+            <p>Rezervē autoservisa apmeklējumu!</p>
+
+            <form>
+                <label for="name">Vārds:</label>
+                <input type="text" id="name" required>
+
+                <label for="phone">Tālrunis:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="car">Automašīnas numurs:</label>
+                <input type="text" id="car" required>
+
+                <label for="service">Pakalpojums:</label>
+                <select id="service" required>
+                    <option value="">Izvēlies pakalpojumu</option>
+                    <option value="ella">Eļļas maiņa</option>
+                    <option value="riepas">Riepu maiņa</option>
+                    <option value="diagnostika">Diagnostika</option>
+                    <option value="bremzes">Bremžu pārbaude</option>
+                </select>
+
+                <label for="date">Datums:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Laiks:</label>
+                <select id="time" required>
+                    <option value="">Izvēlies laiku</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                </select>
+
+                <button type="submit">Rezervēt</button>
+            </form>
+        </div>
+    </body>
+</html>
