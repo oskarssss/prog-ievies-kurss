@@ -19,6 +19,7 @@ app.post('/api/bookings', (req, res) => {
     const existingBooking = db.prepare(`
         SELECT id FROM bookings
         WHERE date = ? AND time = ?
+        AND status != 'cancelled'
     `).get(date, time);
 
     if (existingBooking) {
