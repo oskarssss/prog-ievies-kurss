@@ -16,6 +16,17 @@ app.post('/api/bookings', (req, res) => {
         });
     }
 
+    const existingBooking = db.prepare(`
+        SELECT id FROM bookings
+        WHERE date = ? AND time = ?
+    `).get(date, time);
+
+    if (existingBooking) {
+        return res.status(409).json({
+            message: 'Šis rezervācijas laiks jau ir aizņemts!'
+        });
+    }
+
     const stmt = db.prepare(`
         INSERT INTO bookings (name, phone, car, service, date, time)
         VALUES (?, ?, ?, ?, ?, ?)
