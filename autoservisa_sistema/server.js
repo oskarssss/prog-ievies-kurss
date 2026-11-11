@@ -47,6 +47,37 @@ app.get('/api/bookings', (req, res) => {
     res.json(bookings);
 });
 
+
+app.patch('/api/bookings/:id/status', (req, res) => {
+    const id = req.params.id;
+    const { status } = req.body;
+
+    if (status !== 'confirmed' && status !== 'cancelled') {
+        return res.status(400).json({
+            message: 'Nederīgs rezervācijas statuss!'
+        });
+    }
+
+    const stmt = db.prepare(`
+        UPDATE bookings
+        SET status = ?
+        WHERE id = ?
+    `);
+
+    const result = stmt.run(status, id);
+
+    if (result.changes === 0) {
+        return res.status(404).json({
+            message: 'Rezervācija nav atrasta!'
+        });
+    }
+
+    res.json({
+        message: 'Rezervācijas statuss veiksmīgi mainīts!'
+    });
+});
+
+
 app.listen(3000, () => {
     console.log('Serveris darbojas!');
 });
