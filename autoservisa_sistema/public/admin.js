@@ -26,6 +26,19 @@ async function loadBookings() {
             row.appendChild(cell);
         });
 
+        const actionsCell = document.createElement('td');
+
+        const confirmButton = document.createElement('button');
+        confirmButton.textContent = 'Apstiprināt';
+
+        const cancelButton = document.createElement('button');
+        cancelButton.textContent = 'Atcelt';
+
+        actionsCell.appendChild(confirmButton);
+        actionsCell.appendChild(cancelButton);
+
+        row.appendChild(actionsCell);
+
         table.appendChild(row);
     });
 }
