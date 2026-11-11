@@ -34,6 +34,14 @@ async function loadBookings() {
         const cancelButton = document.createElement('button');
         cancelButton.textContent = 'Atcelt';
 
+        confirmButton.addEventListener('click', function() {
+            changeStatus(booking.id, 'confirmed');
+        });
+
+        cancelButton.addEventListener('click', function() {
+            changeStatus(booking.id, 'cancelled');
+        });
+
         actionsCell.appendChild(confirmButton);
         actionsCell.appendChild(cancelButton);
 
@@ -44,3 +52,22 @@ async function loadBookings() {
 }
 
 loadBookings();
+
+async function changeStatus(id, status) {
+    const response = await fetch(`/api/bookings/${id}/status`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ status: status })
+    });
+
+    const result = await response.json();
+
+    alert(result.message);
+
+    if (response.ok) {
+        loadBookings();
+    }
+}
+
