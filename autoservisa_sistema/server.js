@@ -41,6 +41,12 @@ app.post('/api/bookings', (req, res) => {
 });
 
 
+app.get('/api/bookings', (req, res) => {
+    const bookings = db.prepare('SELECT * FROM bookings ORDER BY date, time').all();
+
+    res.json(bookings);
+});
+
 app.listen(3000, () => {
     console.log('Serveris darbojas!');
 });
