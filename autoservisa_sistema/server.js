@@ -65,7 +65,19 @@ app.patch('/api/bookings/:id/status', (req, res) => {
         WHERE id = ?
     `);
 
-    const result = stmt.run(status, id);
+    let result;
+
+    try {
+        result = stmt.run(status, id);
+    } catch (error) {
+        if (error.code === 'SQLITE_CONSTRAINT_UNIQUE') {
+            return res.status(409).json({
+                message: 'Šis laiks jau ir aizņemts ar citu rezervāciju!'
+            });
+        }
+
+        throw error;
+    }
 
     if (result.changes === 0) {
         return res.status(404).json({
