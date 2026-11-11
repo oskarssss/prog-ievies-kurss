@@ -11,18 +11,18 @@
             <h1>Autoservisa rezervācijas sistēma</h1>
             <p>Rezervē autoservisa apmeklējumu!</p>
 
-            <form>
+            <form id="bookingForm">
                 <label for="name">Vārds:</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
 
                 <label for="phone">Tālrunis:</label>
-                <input type="tel" id="phone" required>
+                <input type="tel" id="phone" name="phone" required>
 
                 <label for="car">Automašīnas numurs:</label>
-                <input type="text" id="car" required>
+                <input type="text" id="car" name="car" required>
 
                 <label for="service">Pakalpojums:</label>
-                <select id="service" required>
+                <select id="service" name="service" required>
                     <option value="">Izvēlies pakalpojumu</option>
                     <option value="ella">Eļļas maiņa</option>
                     <option value="riepas">Riepu maiņa</option>
@@ -31,10 +31,10 @@
                 </select>
 
                 <label for="date">Datums:</label>
-                <input type="date" id="date" required>
+                <input type="date" id="date" name="date" required>
 
                 <label for="time">Laiks:</label>
-                <select id="time" required>
+                <select id="time" name="time" required>
                     <option value="">Izvēlies laiku</option>
                     <option>09:00</option>
                     <option>10:00</option>
